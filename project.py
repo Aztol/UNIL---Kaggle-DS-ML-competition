@@ -14,4 +14,5 @@ for i in range(9):
     print(skrrr(i))
 
 tamer("Yoann")
+print(tamer("Geatan"))
 
