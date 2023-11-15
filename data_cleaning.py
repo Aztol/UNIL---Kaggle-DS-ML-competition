@@ -15,6 +15,8 @@ df = pd.read_csv("training_data.csv")
 print(df.head())
 print(df.isnull().sum())
 
+#french_stopwords = set(stopwords.words('french'))
+
 def preprocess_text(text):
 
     text = text.lower()
@@ -22,6 +24,8 @@ def preprocess_text(text):
 
     tokens = word_tokenize(text, language="french")
     tokens = [mot for mot in tokens if mot.lower() not in stopwords.words('french') and mot not in string.punctuation]
+    #tokens = [mot for mot in tokens if mot.lower() not in french_stopwords and mot not in string.punctuation]
+
 
     #stemmer = SnowballStemmer('french')
     #text = [stemmer.stem(mot) for mot in tokens]
