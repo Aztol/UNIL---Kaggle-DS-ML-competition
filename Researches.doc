@@ -1,0 +1,27 @@
+
+1. Régression Linéaire: Vous pouvez utiliser une régression linéaire si vous parvenez à quantifier la difficulté des textes de manière continue. Les caractéristiques du texte (longueur des phrases, complexité grammaticale, etc.) seront les variables indépendantes, et le niveau de difficulté (peut-être une note sur une échelle) sera la variable dépendante.
+
+2. Régression Logistique : Si vous préférez classer les textes dans des catégories discrètes (comme A1, A2, B1, etc.), la régression logistique est plus appropriée. Elle permet de gérer des problèmes de classification plutôt que de régression.
+
+3. Arbres de Décision (Decision Trees): Les arbres de décision sont utiles pour la classification et la régression. Ils sont particulièrement pertinents pour visualiser la manière dont les décisions sont prises, ce qui peut être utile pour expliquer les prédictions du modèle.
+
+4. Forêts Aléatoires (Random Forests): Une extension des arbres de décision, les forêts aléatoires utilisent de nombreux arbres pour améliorer la précision et éviter le surajustement. Elles sont efficaces pour les tâches de classification et de régression.
+
+5. Machines à Vecteurs de Support (SVM) : Les SVM sont puissantes pour la classification, en particulier dans des espaces de grande dimension. Elles peuvent être utilisées pour classifier les textes en fonction de leur niveau de difficulté.
+
+6. Réseaux de Neurones Artificiels: Les réseaux de neurones, notamment les réseaux neuronaux convolutifs (CNN) et les réseaux de neurones récurrents (RNN), sont efficaces pour traiter le langage naturel. Ils peuvent apprendre des caractéristiques complexes des textes pour une classification plus précise.
+
+7. Modèles de Langage Transformer : Pour une approche de pointe, vous pouvez utiliser des modèles de langage pré-entraînés comme BERT ou GPT-3, en les adaptant (fine-tuning) pour votre tâche spécifique de prédiction de la difficulté du texte.
+
+8. Analyse en Composantes Principales (PCA): En prétraitement, vous pouvez utiliser PCA pour réduire la dimensionnalité de vos données, ce qui peut être utile si vous avez un très grand nombre de caractéristiques.
+
+9. Clustering : En tant que méthode exploratoire, vous pouvez utiliser des techniques de clustering (comme K-means) pour découvrir des groupements naturels dans les niveaux de difficulté des textes.
+
+Articles à lire : 
+
+https://aclanthology.org/2021.bea-1.21/ --> Faire un RNN
+
+https://www.frontiersin.org/articles/10.3389/fncom.2022.992296/full --> Faire un LSTM
+
+https://www.cambridge.org/core/journals/recall/article/abs/predicting-cefr-levels-in-learners-of-english-the-use-of-microsystem-criterial-features-in-a-machine-learning-approach/C915A35CD69168EDFB80DE8F57A4328C
+--> J'ai demandé l'autorissation et j'ai l'article complet
