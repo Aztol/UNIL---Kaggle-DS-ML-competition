@@ -1,4 +1,4 @@
-#Cela est une modification
+import re
 import pandas as pd
 import re
 from nltk.corpus import stopwords
@@ -7,18 +7,12 @@ from nltk.stem import SnowballStemmer
 import nltk
 import string
 
-nltk.download('stopwords')
-nltk.download('punkt')
-
-df = pd.read_csv("training_data.csv")
-
-print(df.head())
-print(df.isnull().sum())
+#
 
 #french_stopwords = set(stopwords.words('french'))
 
 def preprocess_text(text):
-
+    
     text = text.lower()
     text = re.sub(r'[^a-zA-Z\s]', '', text)
 
@@ -31,6 +25,4 @@ def preprocess_text(text):
     #text = [stemmer.stem(mot) for mot in tokens]
     return text
 
-df['clean_text'] = df['sentence'].apply(preprocess_text)
 
-print(df.head())
