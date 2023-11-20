@@ -18,11 +18,37 @@ def preprocess_text(text):
 
     tokens = word_tokenize(text, language="french")
     tokens = [mot for mot in tokens if mot.lower() not in stopwords.words('french') and mot not in string.punctuation]
-    #tokens = [mot for mot in tokens if mot.lower() not in french_stopwords and mot not in string.punctuation]
 
 
     #stemmer = SnowballStemmer('french')
     #text = [stemmer.stem(mot) for mot in tokens]
     return text
 
+def add_length_column(dataframe):
 
+    dataframe['length'] = dataframe['sentence'].apply(lambda x: len(x))
+
+def stem_sentences(sentence):
+    # Tokenize the sentence and apply stemming using Porter Stemmer
+    stemmer = SnowballStemmer('french')
+    words = word_tokenize(sentence)
+    stemmed_words = [stemmer.stem(word) for word in words]
+    return ' '.join(stemmed_words)
+
+def calculate_levels_score(row):
+    # Check corresponding words and calculate levels_score
+    stemmer_sentence = row['stemmer_sentence']
+    a1a2_words = set(row['a1a2'].split())
+    b1b2_words = set(row['b1b2'].split())
+    c1c2_words = set(row['c1c2'].split())
+
+    levels_score = 0
+    for word in stemmer_sentence.split():
+        if word in a1a2_words:
+            levels_score += 1
+        elif word in b1b2_words:
+            levels_score += 2
+        elif word in c1c2_words:
+            levels_score += 3
+
+    return levels_score
