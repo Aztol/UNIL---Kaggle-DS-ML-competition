@@ -25,3 +25,5 @@ https://www.frontiersin.org/articles/10.3389/fncom.2022.992296/full --> Faire un
 
 https://www.cambridge.org/core/journals/recall/article/abs/predicting-cefr-levels-in-learners-of-english-the-use-of-microsystem-criterial-features-in-a-machine-learning-approach/C915A35CD69168EDFB80DE8F57A4328C
 --> J'ai demandé l'autorissation et j'ai l'article complet
+
+https://camembert-model.fr/posts/tutorial/ : Utiliser Bert et camemBERT
