@@ -47,6 +47,7 @@ def calculate_levels_score(df, levels):
 
     levels_score = 0
     for index, row in df.iterrows():
+        levels_score = 0
         current_sentence = row['sentence']
         word = word_tokenize(current_sentence)
         if word in a1a2_words:
@@ -55,5 +56,5 @@ def calculate_levels_score(df, levels):
             levels_score += 2
         elif word in c1c2_words:
             levels_score += 3
-
-    return levels_score
+        df.at[index, 'levels_score'] = levels_score
+    return df
