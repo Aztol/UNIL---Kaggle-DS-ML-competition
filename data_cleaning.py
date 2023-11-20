@@ -35,15 +35,15 @@ def stem_sentences(sentence):
     stemmed_words = [stemmer.stem(word) for word in words]
     return ' '.join(stemmed_words)
 
-def calculate_levels_score(row):
+def calculate_levels_score(row, levels):
     # Check corresponding words and calculate levels_score
     stemmer_sentence = row['stemmer_sentence']
-    a1a2_words = set(row['a1a2'].split())
-    b1b2_words = set(row['b1b2'].split())
-    c1c2_words = set(row['c1c2'].split())
+    a1a2_words = levels['a1a2'].tolist()
+    b1b2_words = levels['b1b2'].tolist()
+    c1c2_words = levels['c1c2'].tolist()
 
     levels_score = 0
-    for word in stemmer_sentence.split():
+    for word in stemmer_sentence:
         if word in a1a2_words:
             levels_score += 1
         elif word in b1b2_words:
