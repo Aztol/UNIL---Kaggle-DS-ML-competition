@@ -10,3 +10,4 @@ Visual Studio Code was our primary tool for developing our models, aided by Chat
 However, training our model on Visual Studio Code proved too slow, leading us to switch to Google Colab and opt for the T4 runtime type, which was considerably faster. We even subscribed to the paid version to further accelerate the process.
 
 In Part 2: Process, we will detail all the steps of our work.
+
