@@ -1,4 +1,5 @@
 import tkinter as tk
+import numpy as np
 from langid.langid import LanguageIdentifier, model
 
 def get_cefr_level(text):
