@@ -15,8 +15,8 @@ difficulty_mapping = {
     5: 'C2'
 }
 
-model_path = '/Users/Gaetan_1/Desktop/model_fromage/model_weights.pt'  # Le dossier où se trouve votre fichier model_weights.pt
-tokenizer_path = '/Users/Gaetan_1/Desktop/model_fromage/tokenizer'  # Le dossier où se trouve votre tokenizer
+model_path = '/model_fromage/model_weights.pt'  # Le dossier où se trouve votre fichier model_weights.pt
+tokenizer_path = '/model_fromage/tokenizer/'  # Le dossier où se trouve votre tokenizer
 
 # Charger le tokenizer
 tokenizer = CamembertTokenizer.from_pretrained(tokenizer_path, local_files_only=True)
