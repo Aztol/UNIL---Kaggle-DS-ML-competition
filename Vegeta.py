@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from transformers import AdamW
 from torch.utils.data import TensorDataset, DataLoader, RandomSampler, SequentialSampler
 from transformers import CamembertForSequenceClassification, CamembertTokenizer
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support, confusion_matrix
 from tqdm import trange
 import nltk
 import tokenizer
@@ -29,7 +30,7 @@ difficulty_mapping = {
 model = CamembertForSequenceClassification.from_pretrained('camembert-base', num_labels=len(difficulty_mapping))
 
 # Load the state dictionary
-model.load_state_dict(torch.load('best_model.pt', map_location=torch.device('cpu')))
+model.load_state_dict(torch.load(r'C:\Users\Laurent Sierro\Desktop\CamemBERT\pytorch_model.bin', map_location=torch.device('cpu')))
 device = torch.device("cpu")
 model.to(device)
 
@@ -38,7 +39,7 @@ new_df = pd.read_csv('unlabelled_test_data.csv')
 new_texts = new_df['sentence'].tolist()  # Assurez-vous que la colonne contient les phrases
 
 # Préparer les données pour le modèle
-tokenizer = CamembertTokenizer.from_pretrained('camembert-base', do_lower_case=True)
+tokenizer = CamembertTokenizer.from_pretrained(r'C:\Users\Laurent Sierro\Desktop\CamemBERT\tokenizer', do_lower_case=True)
 new_input_ids = [tokenizer.encode(sent, add_special_tokens=True, max_length=MAX_LEN, pad_to_max_length=True, truncation=True) for sent in new_texts]
 new_attention_masks = [[float(i > 0) for i in seq] for seq in new_input_ids]
 
