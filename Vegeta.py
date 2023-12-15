@@ -82,7 +82,7 @@ output_df = pd.DataFrame({
 output_df.to_csv('predicted_difficulties.csv', index=False)
 
 accuracy = accuracy_score(true_labels_numeric, predicted_labels)
-precision, recall, f1, _ = precision_recall_fscore_support(true_labels_numeric, predicted_labels, average='binary')
+precision, recall, f1, _ = precision_recall_fscore_support(true_labels_numeric, predicted_labels, average='weighted')
 
 # Confusion Matrix
 conf_matrix = confusion_matrix(true_labels_numeric, predicted_labels)

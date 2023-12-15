@@ -42,6 +42,15 @@ To get the best accuracy without having an overfitted model was tricky. We start
 
 The batch size influence the speed of converge if small but the amount of noise in the model updates too. We found out, by trying, that the optimal batch size were between 16 and 64. 
 
+### Data augmentation
 
+First, we tried implementing the length of the sentence as a new parameter. We thought that the longer a sentence is, the harder it would be. We found that adding the length didn't change the accuracy significatly. 
+Second, we increased the number of sentence by translating the whole training dataset in Portugese and back to French using the deep-translator libraries. By doing so, we hoped that the translation process would add differences into the sentences without changing the overall level. After runing the model with the new dataset, we found ourselves in front an big overfittig problem. Indeed, sentences of low levels (A1, A1, B1) were usually translated perfectly back to french without any differences added. To resolve this problem, we put the .csv file on chatGPT and made a prompt to remove all sentences with a similarity level above 70%. 
+After several tries, we found out that the model overfitted way less but we couldn't manage to beat our previous score of .577.
+
+## Results
+
+As said above, we started which an accuracy of .527 which is not bad. After 22 submissions, we reached our overall best score of .577 accuracy. Sadly we couldn't manage to go further. 
+Let's break down the metrics of our best run. 
 
 
