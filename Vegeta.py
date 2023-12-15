@@ -35,7 +35,7 @@ device = torch.device("cpu")
 model.to(device)
 
 # Charger le nouveau jeu de données
-new_df = pd.read_csv('unlabelled_test_data.csv')
+new_df = pd.read_csv('training_data.csv')
 new_texts = new_df['sentence'].tolist()  # Assurez-vous que la colonne contient les phrases
 
 # Préparer les données pour le modèle
@@ -70,7 +70,8 @@ for batch in prediction_dataloader:
 # Convertir les prédictions en étiquettes de difficulté
 predicted_labels = [np.argmax(p, axis=1).flatten() for p in predictions]
 predicted_labels = np.concatenate(predicted_labels)
-
+true_labels = new_df['difficulty'].values
+true_labels_numeric = [difficulty_mapping[label] for label in true_labels]
 # Créer un DataFrame pour le CSV
 output_df = pd.DataFrame({
     'id': new_df.index,  # ou une autre colonne d'identification si disponible
@@ -79,3 +80,15 @@ output_df = pd.DataFrame({
 
 # Enregistrer en CSV
 output_df.to_csv('predicted_difficulties.csv', index=False)
+
+accuracy = accuracy_score(true_labels_numeric, predicted_labels)
+precision, recall, f1, _ = precision_recall_fscore_support(true_labels_numeric, predicted_labels, average='binary')
+
+# Confusion Matrix
+conf_matrix = confusion_matrix(true_labels_numeric, predicted_labels)
+
+print(f'Accuracy: {accuracy}')
+print(f'Precision: {precision}')
+print(f'Recall: {recall}')
+print(f'F1 Score: {f1}')
+print(f'Confusion Matrix:\n{conf_matrix}')
