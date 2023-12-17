@@ -55,10 +55,10 @@ Let's break down the metrics of our best run.
 
 | | Best Run | 
 |:---------:|:---------:|
-| Precision | 0.5179 |  
-| Recall    | 0.523  | 
-| F1-score | 0.519 | 
-| Accuracy | 0.5431 | 
+| Precision | 0.54 |  
+| Recall    | 0.539  | 
+| F1-score | 0.538 | 
+| Accuracy | 0.56 | 
 
 The confusion matrix is as followed :
 
