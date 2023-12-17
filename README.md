@@ -53,4 +53,11 @@ After several tries, we found out that the model overfitted way less but we coul
 As said above, we started which an accuracy of .527 which is not bad. After 22 submissions, we reached our overall best score of .577 accuracy. Sadly we couldn't manage to go further. 
 Let's break down the metrics of our best run. 
 
+| | Best Run | 
+|:---------:|:---------:|
+| Precision | 0.4753  |  
+| Recall    | 0.4745  | 
+| F1-score | 0.4694 | 
+| Accuracy | 0.4760 | 
+
 
