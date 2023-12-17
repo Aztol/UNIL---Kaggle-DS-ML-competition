@@ -55,9 +55,13 @@ Let's break down the metrics of our best run.
 
 | | Best Run | 
 |:---------:|:---------:|
-| Precision | 0.4753  |  
-| Recall    | 0.4745  | 
-| F1-score | 0.4694 | 
-| Accuracy | 0.4760 | 
+| Precision | 0.5179 |  
+| Recall    | 0.523  | 
+| F1-score | 0.519 | 
+| Accuracy | 0.5431 | 
+
+The confusion matrix is as followed :
+
+![Image 1](https://github.com/Aztol/UNIL---Kaggle-DS-ML-competition/blob/main/images/confusion_matrix.png)
 
 
