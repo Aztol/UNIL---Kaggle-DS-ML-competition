@@ -67,8 +67,11 @@ Let's break down the metrics of our best run.
 *Accuracy of the model, not on Kaggle.
 
 **Precision (0.54)** This indicates that 54% of the instances that the model predicted as positive are actually positive. 
+
 **Recall (0.539)** Recall measures the proportion of actual positive instances that the model correctly identified. A recall of approximately 0.54 means that the model identifies about 54% of all actual positive instances.
+
 **Accuracy (0.56)** This represents the proportion of total predictions (both positive and negative) that were correct. An accuracy of 0.56 indicates that the model correctly predicts 56% of the instances.
+
 **F1-score** The F1-score is the harmonic mean of precision and recall, providing a single score that balances both metrics.
 
 The confusion matrix is as followed :
