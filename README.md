@@ -1,5 +1,5 @@
 # UNIL_IWC
-
+#### Gaetan Stein and Laurent Sierro
 ## Foreword
 
 When the project was initially presented to us, we felt disoriented, uncertain about where to begin. The project seemed both simple and complex: simple in its concise and direct instruction, but complex due to the lack of foundational elements to build upon for a start.
@@ -52,7 +52,8 @@ After several tries, we found out that the model overfitted way less but we coul
 
 Before looking at the results, you can download our trained model with this link. You can use the codel of "camemBERT_loader.py" to make prediction with it. 
 
-Model : https://www.swisstransfer.com/d/b67892b3-3a75-4120-ae4a-bd00debcc705 <span style="color:red">expires on 17-01-2024</span>
+Model : https://www.swisstransfer.com/d/b67892b3-3a75-4120-ae4a-bd00debcc705 
+<span style="color:red">expires on 17-01-2024</span>
 
 As said above, we started which an accuracy of .527 which is not bad. After 22 submissions, we reached our overall best score of .584 accuracy on Kaggle. Sadly we couldn't manage to go further. 
 Let's break down the metrics of our best run. 
