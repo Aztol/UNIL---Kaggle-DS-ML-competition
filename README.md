@@ -78,4 +78,4 @@ The confusion matrix is as followed :
 
 ![Image 1](https://github.com/Aztol/UNIL---Kaggle-DS-ML-competition/blob/main/images/confusion_matrix.png)
 
-
+Knowing the different metrics presented above, we could think that the model's lack of precision makes it useless. But the confusion matrix shows us that when a sentence is wrongly classified, it is most of the time either one level higher or lower. The model fails to determine precisely the CEFR level. The CEFR level requirement being blury, we found that our model performed quite well.
