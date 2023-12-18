@@ -46,7 +46,7 @@ The batch size influence the speed of converge if small but the amount of noise 
 
 First, we tried implementing the length of the sentence as a new parameter. We thought that the longer a sentence is, the harder it would be. We found that adding the length didn't change the accuracy significatly. 
 Second, we increased the number of sentence by translating the whole training dataset in Portugese and back to French using the deep-translator libraries. By doing so, we hoped that the translation process would add differences into the sentences without changing the overall level. After runing the model with the new dataset, we found ourselves in front an big overfittig problem. Indeed, sentences of low levels (A1, A1, B1) were usually translated perfectly back to french without any differences added. To resolve this problem, we put the .csv file on chatGPT and made a prompt to remove all sentences with a similarity level above 70%. 
-After several tries, we found out that the model overfitted way less but we couldn't manage to beat our previous score of .577.
+After several tries, we found out that the model overfitted way less but we couldn't manage to beat our previous score of .584.
 
 ## Results
 
@@ -78,4 +78,8 @@ The confusion matrix is as followed :
 
 ![Image 1](https://github.com/Aztol/UNIL---Kaggle-DS-ML-competition/blob/main/images/confusion_matrix.png)
 
-Knowing the different metrics presented above, we could think that the model's lack of precision makes it useless. But the confusion matrix shows us that when a sentence is wrongly classified, it is most of the time either one level higher or lower. The model fails to determine precisely the CEFR level. The CEFR level requirement being blury, we found that our model performed quite well.
+Knowing the different metrics presented above, we could think that the model's lack of precision makes it useless. But the confusion matrix shows the tendency of the model to predict adjacent CEFR level. The model fails to determine precisely the CEFR level. The CEFR level requirements being blury, we found that our model performed quite well.
+
+## Conclusion
+
+In conclusion, the journey through this project provided precious insights into the challenges and intricacies of natural language processing and machine learning . The decision of focusing on camemBERT proved fruitful despite an early steep learning curve. Overall, this project underlined the complexity of language modeling and laid solid fondations for the next semestre.
