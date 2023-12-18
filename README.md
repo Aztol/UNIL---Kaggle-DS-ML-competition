@@ -50,7 +50,11 @@ After several tries, we found out that the model overfitted way less but we coul
 
 ## Results
 
-As said above, we started which an accuracy of .527 which is not bad. After 22 submissions, we reached our overall best score of .577 accuracy. Sadly we couldn't manage to go further. 
+Before looking at the results, you can download our trained model with this link. You can use the codel of "camemBERT_loader.py" to make prediction with it. 
+
+Model : https://www.swisstransfer.com/d/b67892b3-3a75-4120-ae4a-bd00debcc705 <span style="color:red">expires on 17-01-2024</span>
+
+As said above, we started which an accuracy of .527 which is not bad. After 22 submissions, we reached our overall best score of .584 accuracy on Kaggle. Sadly we couldn't manage to go further. 
 Let's break down the metrics of our best run. 
 
 | | Best Run | 
@@ -58,7 +62,14 @@ Let's break down the metrics of our best run.
 | Precision | 0.54 |  
 | Recall    | 0.539  | 
 | F1-score | 0.538 | 
-| Accuracy | 0.56 | 
+| Accuracy* | 0.56 | 
+
+*Accuracy of the model, not on Kaggle.
+
+**Precision (0.54)** This indicates that 54% of the instances that the model predicted as positive are actually positive. 
+**Recall (0.539)** Recall measures the proportion of actual positive instances that the model correctly identified. A recall of approximately 0.54 means that the model identifies about 54% of all actual positive instances.
+**Accuracy (0.56)** This represents the proportion of total predictions (both positive and negative) that were correct. An accuracy of 0.56 indicates that the model correctly predicts 56% of the instances.
+**F1-score** The F1-score is the harmonic mean of precision and recall, providing a single score that balances both metrics.
 
 The confusion matrix is as followed :
 
