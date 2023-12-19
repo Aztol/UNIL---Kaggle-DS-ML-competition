@@ -10,6 +10,8 @@ Visual Studio Code was our primary tool for developing our models, aided by Chat
 
 However, training our model on Visual Studio Code proved too slow, leading us to switch to Google Colab and opt for the T4 runtime type, which was considerably faster. We even subscribed to the paid version to further accelerate the process.
 
+Link to the presentation video : https://youtu.be/ihEi_XEGRV4
+
 ## Goals
 
 The project asked us to predict the CEFR level of french sentences by training a model on given and labelled sentences. 
