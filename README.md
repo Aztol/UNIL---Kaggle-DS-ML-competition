@@ -52,7 +52,7 @@ After several tries, we found out that the model overfitted way less but we coul
 
 ## Results
 
-Before looking at the results, you can download our trained model with this link. You can use the codel of "camemBERT_loader.py" to make prediction with it. 
+Before looking at the results, you can download our trained model with this link. You can use the code of "camemBERT_loader.py" to make prediction with it. Our trained model is avaible to download on the GitHub "Tag" tab. If it is not working, use the link bellow as a backup.
 
 Model : https://www.swisstransfer.com/d/b67892b3-3a75-4120-ae4a-bd00debcc705 
 <span style="color:red">expires on 17-01-2024</span>
